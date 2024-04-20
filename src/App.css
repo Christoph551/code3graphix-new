@@ -11,6 +11,18 @@
   align-items: right;
 }
 
+.productPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.productParagraph {
+  font-weight: bold;
+  text-align: center;
+}
+
 .homePage {
   display: flex;
   justify-content: center;
@@ -34,6 +46,40 @@
   width: 200px;
   height: 200px;
   margin: 10px;
+}
+
+.homeGallery img:hover {
+  transform: scale(1.1);
+}
+
+.productList1 h2{
+  text-align: center;
+  display: flex;
+}
+
+.productList1 img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.productList1 img:hover {
+  transform: scale(1.1);
+}
+
+.productList2 h2 {
+  text-align: center;
+  display: flex;
+}
+
+.productList2 img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.productList2 img:hover {
+  transform: scale(1.1);
 }
 
 .col {
