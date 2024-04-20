@@ -19,9 +19,9 @@ function ResponsiveAppBar() {
 
     function Navigation() {
         return (
-            <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+            <Navbar collapseOnSelect expand="lg" id="navBar">
                 <Container className='navContainer'>
-                    <Navbar.Brand as={Link} to="/">Code 3 Graphix</Navbar.Brand>
+                    <Navbar className="companyLogo" as={Link} to="/">Code 3 Graphix</Navbar>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse className='navbarLinks' id="responsive-navbar-nav">
                         <Nav>
