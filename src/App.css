@@ -1,0 +1,43 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbarLinks {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeParagraph {
+  padding: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.homeGallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeGallery img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
