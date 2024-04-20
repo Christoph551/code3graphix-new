@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Img from 'react-bootstrap/Image';
 
+
 export default function Products() {
     return (
         <div>

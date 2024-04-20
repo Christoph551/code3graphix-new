@@ -3,12 +3,47 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .navbarLinks {
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+
+.navbarLinks a {
+  color:#033a81;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.navbarLinks a:hover {
+  color: #c8dcf7;
+  border-radius: 15px;
+  text-decoration: underline;
+}
+
+#navBar {
+  background-image: linear-gradient(to right, #093774, #a0c3f7);
+}
+
+.companyLogo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: #c8dcf7;
+  text-decoration: none;
+}
+
+.companyLogo:hover {
+  color: #033a81;
+  background-color: #c8dcf7;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 .productPage {
