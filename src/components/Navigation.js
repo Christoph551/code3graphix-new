@@ -19,21 +19,26 @@ function ResponsiveAppBar() {
 
     function Navigation() {
         return (
-            <Navbar collapseOnSelect expand="lg" id="navBar">
-                <Container className='navContainer'>
-                    <Navbar className="companyLogo" as={Link} to="/">Code 3 Graphix</Navbar>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse className='navbarLinks' id="responsive-navbar-nav">
-                        <Nav>
-                            {pages.map((page, index) => (
-                                <Nav.Link key={index} as={Link} to={page.toLowerCase().replace(/\s+/g, '')}>
-                                    {page}
-                                </Nav.Link>
-                            ))}
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+            <div>
+                <Navbar collapseOnSelect expand="lg" id="navBar">
+                    <Container className='navContainer'>
+                        <Navbar className="companyLogo" as={Link} to="/">Code 3 Graphix</Navbar>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse className='navbarLinks' id="responsive-navbar-nav">
+                            <Nav>
+                                {pages.map((page, index) => (
+                                    <Nav.Link key={index} as={Link} to={page.toLowerCase().replace(/\s+/g, '')}>
+                                        {page}
+                                    </Nav.Link>
+                                ))}
+                            </Nav>
+                        </Navbar.Collapse>
+                        <Link to="/login" >
+                            Login
+                        </Link>
+                    </Container>
+                </Navbar>
+            </div>
         );
     }
 

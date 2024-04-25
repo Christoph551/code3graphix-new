@@ -1,0 +1,32 @@
+[
+    {
+        "username": "JuniorTuc",
+        "user_email": "glennsimmondsjr@gmail.com",
+        "password": "Lovebacon01",
+        "role": "admin"
+    },
+    {
+        "username": "Christoph551",
+        "user_email": "christophersimmonds551@gmail.com",
+        "password": "Simmond$551!",
+        "role": "admin"
+    },
+    {
+        "username": "PapaSimmonds",
+        "user_email": "azglenn110@gmail.com",
+        "password": "Gizmo8800!",
+        "role": "admin"
+    },
+    {
+        "username": "MamaSimmonds",
+        "user_email": "kasimmonds@msn.com",
+        "password": "Gizmo8800!",
+        "role": "admin"
+    },
+    {
+        "username": "TestUser",
+        "user_email": "test@email.com",
+        "password": "password",
+        "role": "user"
+    }
+]

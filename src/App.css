@@ -122,3 +122,57 @@
   justify-content: center;
   align-items: center;
 }
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.usernameInput {
+  margin: 10px;
+}
+
+.passwordInput {
+  margin: 10px;
+}
+
+.submitButton {
+  margin: 10px;
+}
+
+.emailInput {
+  margin: 10px;
+}
