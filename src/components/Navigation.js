@@ -33,7 +33,7 @@ function ResponsiveAppBar() {
                                 ))}
                             </Nav>
                         </Navbar.Collapse>
-                        <Link to="/login" >
+                        <Link className="loginBtn" to="/login" >
                             Login
                         </Link>
                     </Container>
