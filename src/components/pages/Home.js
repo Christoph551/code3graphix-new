@@ -70,8 +70,8 @@ export default function Home() {
     return (
         <Container>
             <div>
-                <header className="homePage">
-                    <h1>Home</h1>
+                <header className="pageHeader">
+                    <h2>Home</h2>
                 </header>
 
                 <div className="homeParagraph">
