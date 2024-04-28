@@ -135,13 +135,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .productImage {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex: 1;
+
 }
 
 .col {

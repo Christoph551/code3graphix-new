@@ -5,20 +5,7 @@ const ProductTag = require('./ProductTag');
 const User = require('./User');
 
 // Explore adding an Order model in order to track a particular user's purchase history.
-// const Order = require('./Order');
 
-// Define models and associations
-// const User = sequelize.define('User', { /* user attributes */ });
-// const Product = sequelize.define('Product', { /* product attributes */ });
-// const Order = sequelize.define('Order', { /* order attributes */ });
-
-// User.hasMany(Order);
-// Order.belongsTo(User);
-
-// Order.belongsToMany(Product, { through: 'OrderProduct' });
-// Product.belongsToMany(Order, { through: 'OrderProduct' });
-//Test Code above this line. Uncertain if I will implement it. 
-// __________________________________________________________________________________________
 
 // Products belongsTo User
 Product.belongsTo(User);

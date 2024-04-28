@@ -2,30 +2,19 @@ import React, { useState, useEffect } from 'react';
 import '../../App.css';
 
 function Login() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
 
-    useEffect(() => {
-        if (username.trim() && password.trim()) {
-            setIsSubmitEnabled(true);
-        } else {
-            setIsSubmitEnabled(false);
-        }
-    }, [username, password]);
-    
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        const username = document.getElementById('username').value;
+        const user_email = document.getElementById('user_email').value;
         const password = document.getElementById('password').value;
 
-        if (isSubmitEnabled) {
+        {
             // Handle login logic here
             try {
                 const response = await fetch('/api/user/login', {
                     method: 'POST',
-                    body: JSON.stringify({ username, password }),
+                    body: JSON.stringify({ user_email, password }),
                     headers: { 'Content-Type': 'application/json' },
                 });
 
@@ -47,10 +36,10 @@ function Login() {
         <div className='loginPage'>
             <h1 className='loginTitle'>Login</h1>
             <form className="loginForm" onSubmit={handleLogin}>
-                <input className="usernameInput" id="username" type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                <input className="passwordInput" id="password" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input className="user_emailInput" id="user_email" type="text" placeholder="User Email" />
+                <input className="passwordInput" id="password" type="password" placeholder="Password" />
 
-                <button type="submit" disabled={!isSubmitEnabled}>Login</button>
+                <button type="submit">Login</button>
             </form>
             <div className="formBottom">
                 <p>Don't have an account? <a href="/signup">Sign up here</a> instead.</p>
