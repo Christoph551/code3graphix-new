@@ -7,15 +7,7 @@ import { Link } from 'react-router-dom';
 const pages = ['Home', 'Products', 'Custom Orders', 'Cart'];
 
 function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+    
 
     function Navigation() {
         return (
@@ -32,10 +24,10 @@ function ResponsiveAppBar() {
                                     </Nav.Link>
                                 ))}
                             </Nav>
-                        </Navbar.Collapse>
                         <Link className="loginBtn" to="/login" >
                             Login
                         </Link>
+                        </Navbar.Collapse>
                     </Container>
                 </Navbar>
             </div>

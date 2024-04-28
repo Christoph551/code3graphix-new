@@ -36,6 +36,9 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                len: [4],
+            },
         },
         role: {
             type: DataTypes.STRING,

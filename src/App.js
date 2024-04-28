@@ -7,6 +7,7 @@ import CustomOrders from './components/pages/CustomOrders';
 import Cart from './components/pages/Cart';
 import Login from './components/pages/Login';
 import SignUp from './components/pages/Signup';
+import Drinkware from './components/pages/Drinkware';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/:text?" element={<Home />} />
+              <Route path="/categories/:id?" element={<Drinkware />} />
             </Route>
       </Routes>
     </Router>

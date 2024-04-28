@@ -21,7 +21,7 @@ export default function Products() {
                         <div className='productCard'>
                         {/* Rather than the link being /drinkware, keep the path as /products and include an ID associated with different items. Explore also using tags for each category */}
                             <section className="productImage">
-                                <Link to="/drinkware">
+                                <Link to="/categories/1">
                                     <h2>Drinkware</h2>
                                     <Img src="https://via.placeholder.com/150" alt="Drinkware" />
                                 </Link>
