@@ -14,77 +14,73 @@ export default function Products() {
 
                 <p className='productParagraph'>Select a category to see additional products!</p>
             </div>
-            <div className='productPage'>
-                <div className='productList'>
+            <div className='productList'>
+
+            <div className='productContainer'>
+                    <div className='productCard'>
+                        <section className="productImage">
+                            <Link className='productLink' to="/categories/1">
+                                <h2 className="cardTitle">Drinkware</h2>
+                                <Img className="cardImage" src="/images/products/tumblers/Teal30oz.png" alt="Drinkware" />
+                            </Link>
+                        </section>
+                    </div>
+                </div>
+                <div className='productContainer'>
+                    <div className='productCard'>
+                        <section className="productImage">
+                            <Link className='productLink' to="/categories/2">
+                                <h2 className="cardTitle">Personalized Gifts</h2>
+                                <Img className="cardImage" src="/images/products/tumblers/DarkGray30oz.png" alt="Personalized Gifts" />
+                            </Link>
+                        </section>
+                    </div>
+                </div>
 
                     <div className='productContainer'>
                         <div className='productCard'>
-                        {/* Rather than the link being /drinkware, keep the path as /products and include an ID associated with different items. Explore also using tags for each category */}
                             <section className="productImage">
-                                <Link to="/categories/1">
-                                    <h2>Drinkware</h2>
-                                    <Img src="/images/products/tumblers/Teal30oz.png" alt="Drinkware" />
-                                </Link>
-                            </section>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className='productCard'>
-                            <section className="productImage">
-                                <Link to="/categories/2">
-                                <h2>Personalized Gifts</h2>
-                                    <Img src="/images/products/tumblers/DarkGray30oz.png" alt="Personalized Gifts" />
-                                </Link>
-                            </section>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className='productCard'>
-                            <section className="productImage">
-                                <Link to="/categories/3">
-                                <h2>Glass and Acrylics</h2>
-                                    <Img src="/images/products/tumblers/Orange30oz.png" alt="Glass and Acrylics" />
+                                <Link className='productLink' to="/categories/3">
+                                <h2 className='cardTitle'>Glass and Acrylics</h2>
+                                    <Img className='cardImage' src="/images/products/tumblers/Orange30oz.png" alt="Glass and Acrylics" />
                                 </Link>
                             </section>
                         </div>
                     </div>
                 </div>
                 <div className='productList'>
-                    <div>
+                    <div className='productContainer'>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/categories/4">
-                                <h2>Engraveable Metals</h2>
-                                    <Img src="/images/products/tumblers/White30oz.png" alt="Engraveable Metals" />
+                                <Link className='productLink' to="/categories/4">
+                                <h2 className='cardTitle'>Engraveable Metals</h2>
+                                    <Img className='cardImage' src="/images/products/tumblers/White30oz.png" alt="Engraveable Metals" />
                                 </Link>
                             </section>
                         </div>
                     </div>
 
-                    <div>
+                    <div className='productContainer'>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/categories/5">
-                                <h2>Sublimation</h2>
-                                    <Img src="/images/products/tumblers/Red30oz.png" alt="Sublimation" />
+                                <Link className='productLink' to="/categories/5">
+                                <h2 className='cardTitle'>Sublimation</h2>
+                                    <Img className='cardImage' src="/images/products/tumblers/Red30oz.png" alt="Sublimation" />
                                 </Link>
                             </section>
                         </div>
                     </div>
 
-                    <div>
+                    <div className='productContainer'>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/categories/6">
-                                <h2>Laserable Leather</h2>
-                                    <Img src="/images/products/tumblers/Maroon30oz.png" alt="Laserable Leather" />
+                                <Link className='productLink' to="/categories/6">
+                                <h2 className='cardTitle'>Laserable Leather</h2>
+                                    <Img className='cardImage' src="/images/products/tumblers/Maroon30oz.png" alt="Laserable Leather" />
                                 </Link>
                             </section>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )

@@ -36,20 +36,22 @@ function SignUp() {
     };
 
     return (
-        <div className='signupPage'>
-            <h1 className='signupTitle'>Sign Up</h1>
-            <form className="signupForm" onSubmit={handleSignUp}>
-                <label htmlFor="username">Username</label>
-                <input className="usernameInput" type="text" placeholder="Username" id="username" />
-                <label htmlFor="user_email">Email</label>
-                <input className="emailInput" type="email" placeholder="Email" id="user_email" />
-                <label htmlFor="password">Password</label>
-                <input className="passwordInput" type="password" placeholder="Password" id="password" />
+        <div className='overall'>
+            <div className='signupPage'>
+                <h1 className='signupTitle'>Sign Up</h1>
+                <form className="signupForm" onSubmit={handleSignUp}>
+                    <label htmlFor="username">Username</label>
+                    <input className="usernameInput" type="text" placeholder="Username" id="username" />
+                    <label htmlFor="user_email">Email</label>
+                    <input className="emailInput" type="email" placeholder="Email" id="user_email" />
+                    <label htmlFor="password">Password</label>
+                    <input className="passwordInput" type="password" placeholder="Password" id="password" />
 
-                <button type="submit" >Sign Up</button>
-            </form>
-            <div className="formBottom">
-                <p>Already have an account? <a href="/login">Log in here</a>.</p>
+                    <button type="submit" >Sign Up</button>
+                </form>
+                <div className="formBottom">
+                    <p>Already have an account? <a href="/login">Log in here</a>.</p>
+                </div>
             </div>
         </div>
     );

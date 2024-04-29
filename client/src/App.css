@@ -54,10 +54,7 @@
 }
 
 .companyLogo:hover {
-  color: #033a81;
-  background-color: #c8dcf7;
-  border-radius: 15px;
-  padding: 5px;
+  color: #ffffff;
 }
 
 .pageHeader {
@@ -92,13 +89,17 @@
 
 .productPage {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .productParagraph {
   font-weight: bold;
   text-align: center;
+}
+
+.productList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .productList h2{
@@ -125,17 +126,38 @@
 }
 
 .productContainer {
+  margin: 30px;
+}
+
+.productContainer:hover {
+  transform: scale(1.1);
+  background-color: rgb(214, 213, 213);
+  border-radius: 8px;
+}
+
+.productContainer img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.productLink {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-decoration: none;
+  color: #076fac;
 }
 
 .productCard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  height: 400px;
+  transition: background-color 1.5s;
 }
 
 .productImage {
@@ -143,7 +165,15 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+}
 
+.cardTitle {
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.cardImage {
+  max-width: 100%; /* Ensure the image doesn't exceed the card's width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .col {
