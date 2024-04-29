@@ -1,6 +1,7 @@
 [
     {
-        "category_name": "Drinkware"
+        "category_name": "Drinkware",
+        "img": "../assets/images/tumblers/LightBlue30oz.png"
     },
     {
         "category_name": "Personalized Gifts"

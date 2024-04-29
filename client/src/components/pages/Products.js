@@ -23,7 +23,7 @@ export default function Products() {
                             <section className="productImage">
                                 <Link to="/categories/1">
                                     <h2>Drinkware</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Drinkware" />
+                                    <Img src="/images/products/tumblers/Teal30oz.png" alt="Drinkware" />
                                 </Link>
                             </section>
                         </div>
@@ -32,9 +32,9 @@ export default function Products() {
                     <div>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/personalized-gifts">
+                                <Link to="/categories/2">
                                 <h2>Personalized Gifts</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Personalized Gifts" />
+                                    <Img src="/images/products/tumblers/DarkGray30oz.png" alt="Personalized Gifts" />
                                 </Link>
                             </section>
                         </div>
@@ -43,9 +43,9 @@ export default function Products() {
                     <div>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/glass-and-acrylics">
+                                <Link to="/categories/3">
                                 <h2>Glass and Acrylics</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Glass and Acrylics" />
+                                    <Img src="/images/products/tumblers/Orange30oz.png" alt="Glass and Acrylics" />
                                 </Link>
                             </section>
                         </div>
@@ -55,9 +55,9 @@ export default function Products() {
                     <div>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/engraveable-metals">
+                                <Link to="/categories/4">
                                 <h2>Engraveable Metals</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Engraveable Metals" />
+                                    <Img src="/images/products/tumblers/White30oz.png" alt="Engraveable Metals" />
                                 </Link>
                             </section>
                         </div>
@@ -66,9 +66,9 @@ export default function Products() {
                     <div>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/sublimation">
+                                <Link to="/categories/5">
                                 <h2>Sublimation</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Sublimation" />
+                                    <Img src="/images/products/tumblers/Red30oz.png" alt="Sublimation" />
                                 </Link>
                             </section>
                         </div>
@@ -77,9 +77,9 @@ export default function Products() {
                     <div>
                         <div className='productCard'>
                             <section className="productImage">
-                                <Link to="/laserable-leather">
+                                <Link to="/categories/6">
                                 <h2>Laserable Leather</h2>
-                                    <Img src="https://via.placeholder.com/150" alt="Laserable Leather" />
+                                    <Img src="/images/products/tumblers/Maroon30oz.png" alt="Laserable Leather" />
                                 </Link>
                             </section>
                         </div>

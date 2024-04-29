@@ -8,32 +8,39 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const path = require('path');
 
-app.use(cors( { origin: 'http://localhost:3000' } ));
-app.use(express.static(path.join(__dirname, 'client', 'public')));
-
+// Session configuration
 const sess = {
     secret: process.env.SECRET,
     cookie: {
-        maxAge: 300000, // 5 minutes
+        maxAge: 600000, // 10 minutes
         httpOnly: true,
         secure: false, // change to true in production
-        sameSite: 'strict',    
+        sameSite: 'none',    
     },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-        db: sequelize
+        db: sequelize,
     })
 };
 
+// Session middleware
 app.use(session(sess));
+
+// CORS middleware
+app.use(cors({ origin: 'http://localhost:3000' }));
+
+// Serve static files from the client/public directory
+app.use(express.static(path.join(__dirname, 'client', 'public')));
+
+// Parse incoming JSON requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
-
+// Sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}!`));
 });
