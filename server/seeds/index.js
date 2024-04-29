@@ -27,3 +27,6 @@ const seedDatabase = async () => {
 }
 
 seedDatabase();
+
+// Explore adding in design choices for the database. Would need models and seeds to be updated to reflect these changes.
+// Thinking of having a user select from a dropdown list of design choices (tags may need to be renamed to design choices). This would then allow access to the database to be filtered by design choice via id and relationship to products.
