@@ -2,16 +2,16 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import BeverageHolder from '../../assets/images/beverage_holder.png';
-import BottleOpener from '../../assets/images/bottle_openers.png';
-import Coaster from '../../assets/images/coaster.png';
-import Flask from '../../assets/images/flask.png';
-import Ornament from '../../assets/images/ornament.png';
-import Plaque from '../../assets/images/plaque.png';
-import Sign from '../../assets/images/sign.png';
-import TravelMug from '../../assets/images/travel_mug.png';
-import Tumbler from '../../assets/images/tumbler.png';
-import WaterBottle from '../../assets/images/water_bottle.png';
+import BeverageHolder from '../../assets/images/homePage/beverage_holder.png';
+import BottleOpener from '../../assets/images/homePage/bottle_openers.png';
+import Coaster from '../../assets/images/homePage/coaster.png';
+import Flask from '../../assets/images/homePage/flask.png';
+import Ornament from '../../assets/images/homePage/ornament.png';
+import Plaque from '../../assets/images/homePage/plaque.png';
+import Sign from '../../assets/images/homePage/sign.png';
+import TravelMug from '../../assets/images/homePage/travel_mug.png';
+import Tumbler from '../../assets/images/homePage/tumbler.png';
+import WaterBottle from '../../assets/images/homePage/water_bottle.png';
 
 const products = [
     {
