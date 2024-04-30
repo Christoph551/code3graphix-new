@@ -19,7 +19,11 @@ router.get('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { user_email: req.body.user_email } });
+        const timeRemaining = req.session.cookie.maxAge / 1000; // Convert milliseconds to seconds
+        const minutesRemaining = Math.floor(timeRemaining / 60);
 
+        const cookieExpiry = `${minutesRemaining} minutes`;
+        
         if (!userData) {
             res.status(400).json({ 
                 message: 
@@ -27,9 +31,9 @@ router.post('/login', async (req, res) => {
             });
             return;
         }
-
+        
         const validPassword = await userData.checkPassword(req.body.password);
-
+        
         if (!validPassword) {
             res.status(400).json({ 
                 message: 
@@ -37,14 +41,15 @@ router.post('/login', async (req, res) => {
             });
             return;
         }
-
+        
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.user_email = userData.user_email;
             req.session.password = userData.password;
             req.session.logged_in = true;
-
-            res.json({ user: userData, message: 'You are now logged in!' });
+            
+            
+            res.json({ user: userData, message: `You are logged in! Session Cookie Expires In: ${cookieExpiry}` });
         });
 
     } catch (err) {
@@ -61,6 +66,7 @@ router.post('/signup', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.user_email = userData.user_email;
+            req.session.password = userData.password;
             req.session.logged_in = true;
 
             res.status(200).json(userData);

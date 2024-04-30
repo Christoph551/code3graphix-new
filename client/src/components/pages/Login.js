@@ -11,7 +11,7 @@ function Login() {
         if (user_email && password) {
             // Handle login logic here
             try {
-                const response = await fetch('http://localhost:3001/user/login', {
+                const response = await fetch('http://localhost:3001/api/user/login', {
                     method: 'POST',
                     body: JSON.stringify({ 
                         user_email: user_email, 
@@ -24,14 +24,17 @@ function Login() {
                     alert('Successfully logged in, returning to homepage.');
                     document.location.replace('/');
                 } else {
-                    alert('Nope, still broken!');
+                    alert('Failed to log in.');
                     console.log(response.statusText)
                 }
             } catch (error) {
                 console.error('Error logging in:', error.message);
                 alert('An error occurred while logging in.');
             }
+        } else {
+            alert('Please enter both an email and password to log in.');
         }
+
     };
 
     return (

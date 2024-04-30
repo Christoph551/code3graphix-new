@@ -12,9 +12,9 @@ const path = require('path');
 const sess = {
     secret: process.env.SECRET,
     cookie: {
-        maxAge: 600000, // 10 minutes
+        maxAge: 300000, // 5 minutes
         httpOnly: true,
-        secure: false, // change to true in production
+        secure: true, // change to true in production
         sameSite: 'none',    
     },
     resave: false,
@@ -28,7 +28,14 @@ const sess = {
 app.use(session(sess));
 
 // CORS middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+const corsOptions = {
+    origin: ['http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+
+app.use(cors(corsOptions));
 
 // Serve static files from the client/public directory
 app.use(express.static(path.join(__dirname, 'client', 'public')));
