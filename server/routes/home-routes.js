@@ -37,5 +37,15 @@ router.get('/signup', async (req, res) => {
     }
 });
 
+router.get('/logout', async (req, res) => {
+    try {
+        req.session.destroy(() => {
+            res.redirect('/home');
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 module.exports = router;

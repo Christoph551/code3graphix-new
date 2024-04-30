@@ -43,9 +43,8 @@ router.post('/login', async (req, res) => {
         }
         
         req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.user_email = userData.user_email;
-            req.session.password = userData.password;
+            req.session.user_email = userData.id;
+            req.session.password = userData.id;
             req.session.logged_in = true;
             
             
@@ -64,9 +63,8 @@ router.post('/signup', async (req, res) => {
         const userData = await User.create(req.body);
 
         req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.user_email = userData.user_email;
-            req.session.password = userData.password;
+            req.session.username = userData.id;
+            req.session.user_email = userData.id;
             req.session.logged_in = true;
 
             res.status(200).json(userData);
@@ -90,5 +88,6 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
+
 
 module.exports = router;

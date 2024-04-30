@@ -120,7 +120,7 @@
 
 .overall {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
@@ -164,6 +164,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.productPrice {
+  margin-right: 10px;
+}
+
+.productStock {
+  margin-left: 10px;
+}
+
+.productBtn {
+  display: flex;
+  justify-content: flex-end;
   flex: 1;
 }
 
