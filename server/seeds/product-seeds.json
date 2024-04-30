@@ -4,55 +4,63 @@
         "product_name": "Tumbler",
         "price": 24.99,
         "stock": 25,
-        "category_id": 1
+        "category_id": 1,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 2,
         "product_name": "Christmas Ornament",
         "price": 10.99,
         "stock": 10,
-        "category_id": 2
+        "category_id": 2,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 3,
         "product_name": "Gaming PC Glass Panel",
         "price": 99.99,
         "stock": 1,
-        "category_id": 3
+        "category_id": 3,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 4,
         "product_name": "Knife",
         "price": 34.99,
         "stock": 5,
-        "category_id": 4
+        "category_id": 4,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 5,
         "product_name": "Sublimated Coffee Mug",
         "price": 29.99,
         "stock": 2,
-        "category_id": 5
+        "category_id": 5,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 6,
         "product_name": "Card Protector For Poker Players",
         "price": 19.99,
         "stock": 1,
-        "category_id": 6
+        "category_id": 6,
+        "image": "/images/products/tumblers/Black30oz.png"
     },
     {
         "id": 7,
         "product_name": "Water Bottle",
         "price": 14.99,
         "stock": 10,
-        "category_id": 1
+        "category_id": 1,
+        "image": "/images/products/waterBottles/Black.png"
     },
     {
         "id": 8,
         "product_name": "Coffee Mug",
         "price": 19.99,
         "stock": 5,
-        "category_id": 1
+        "category_id": 1,
+        "image": "/images/products/tumblers/Black30oz.png"
     }
 ]

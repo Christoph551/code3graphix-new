@@ -138,7 +138,6 @@
 .productContainer img {
   width: 200px;
   height: 200px;
-  margin: 10px;
 }
 
 .productLink {
@@ -156,8 +155,6 @@
   border-radius: 8px;
   padding: 10px;
   width: 200px;
-  height: 400px;
-  transition: background-color 1.5s;
 }
 
 .productImage {
