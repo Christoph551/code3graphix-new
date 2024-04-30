@@ -41,6 +41,13 @@ Product.init(
                 model: 'category',
                 key: 'id'
             }
+        },
+        image: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                isUrl: true
+            }
         }
     },
     {

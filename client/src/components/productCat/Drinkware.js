@@ -21,15 +21,14 @@ function Drinkware() {
             <div className="product-cards">
 
                 {products.map(product => (
-                    <div className='overall'>
+                    <div className='overall' key={product.id}>
                         <div className='productContainer'>
-                            <div key={product.id} className="productCard">
+                            <div className="productCard">
                                 <h3>{product.product_name}</h3>
-                                <Img className='cardImage' src={`/images/${product.image}`} alt={product.product_name} />
+                                <Img className='cardImage' src={`${product.image}`} alt={product.product_name} />
 
                                 {/* Find dropdown component in bootstrap and allow users to select a size */}
                                 {/* Add additional dropdowns to select font style, color, etc... Would need to integrate into database models */}
-                                <button className='productBtn'>Add to Cart</button>
                             </div>
                         </div>
                         <div className='productInfo'>
@@ -43,6 +42,7 @@ function Drinkware() {
                                 <p>Stock: {product.stock}</p>
                             </div>
                         </div>
+                            <button className='productBtn'>Add to Cart</button>
                     </div>
                 ))}
             </div>

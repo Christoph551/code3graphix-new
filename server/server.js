@@ -17,7 +17,7 @@ const sess = {
     cookie: {
         maxAge: 300000, // 5 minutes
         httpOnly: true,
-        secure: true, // change to true in production
+        secure: false, // change to true in production
     },
     resave: false,
     saveUninitialized: true,
