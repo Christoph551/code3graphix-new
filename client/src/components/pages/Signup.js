@@ -33,6 +33,9 @@ function SignUp() {
                 alert('An error occurred while signing up.');
             }
         }
+        else {
+            alert('Please enter a username, email, and password to sign up.');
+        }
     };
 
     return (
