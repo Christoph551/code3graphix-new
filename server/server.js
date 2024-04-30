@@ -1,12 +1,15 @@
+const path = require('path');
 const express = require('express');
 const session = require('express-session');
+const routes = require('./routes');
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const routes = require('./routes');
+
 const cors = require('cors');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
-const path = require('path');
 
 // Session configuration
 const sess = {
@@ -15,7 +18,6 @@ const sess = {
         maxAge: 300000, // 5 minutes
         httpOnly: true,
         secure: true, // change to true in production
-        sameSite: 'none',    
     },
     resave: false,
     saveUninitialized: true,
@@ -30,8 +32,9 @@ app.use(session(sess));
 // CORS middleware
 const corsOptions = {
     origin: ['http://localhost:3000'],
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
 };
 
 

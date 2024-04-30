@@ -1,30 +1,52 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
-// Define pages array without duplicates
 const pages = ['Home', 'Products', 'Custom Orders', 'Cart'];
 
 function ResponsiveAppBar() {
-    const [isLoggedIn, setIsLoggedIn] = React.useState(false); 
+    const [isLoggedIn, setIsLoggedIn] = useState(false); 
+    const [showModal, setShowModal] = useState(false);
+
 
     const handleLogout = async () => {
         // Perform logout logic here
         setIsLoggedIn(false);
 
-        const response = await fetch('http://localhost:3001/api/user/logout', {
-            method: 'POST', 
+        const response = await fetch('http://localhost:3001/user/logout', {
+            method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         });
     
         if (response.ok) {
-            document.location.replace('/');
+            setShowModal(true);
         } else {
             alert('Log out unsuccessful. Please try again.');
         }
     };
+
+    useEffect(() => {
+        // Check if the user is already authenticated
+        const checkAuthentication = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/api/user', {
+                    method: 'GET',
+                    credentials: 'include' // Include credentials for session cookie
+                });
+                if (response.ok) {
+                    setIsLoggedIn(true);
+                }
+            } catch (error) {
+                console.error('Error checking authentication:', error);
+            }
+        };
+
+        checkAuthentication();
+    }, []);
 
     function Navigation() {
         return (
@@ -55,6 +77,19 @@ function ResponsiveAppBar() {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+                <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Logout Successful</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    You have successfully logged out.
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
             </div>
         );
     }
