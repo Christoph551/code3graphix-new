@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-const pages = ['Home', 'Products', 'Custom Orders', 'Cart'];
+const pages = ['Home', 'Orders'];
 
 function ResponsiveAppBar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -78,17 +78,17 @@ function ResponsiveAppBar() {
                     </Container>
                 </Navbar>
                 <Modal show={showModal} onHide={() => setShowModal(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Logout Successful</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    You have successfully logged out.
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>
-                        Close
-                    </Button>
-                </Modal.Footer>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Logout Successful</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        You have successfully logged out.
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShowModal(false)}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
             </Modal>
             </div>
         );

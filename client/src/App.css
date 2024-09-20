@@ -22,21 +22,7 @@
   font-weight: bolder;
 }
 
-.loginBtn {
-  color:#033a81;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
 .navbarLinks a:hover {
-  color: #c8dcf7;
-  border-radius: 15px;
-  text-decoration: underline;
-}
-
-.loginBtn:hover {
   color: #c8dcf7;
   border-radius: 15px;
   text-decoration: underline;
@@ -59,7 +45,7 @@
 
 .pageHeader {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
 }
@@ -94,28 +80,6 @@
 .productParagraph {
   font-weight: bold;
   text-align: center;
-}
-
-.productList {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.productList h2{
-  text-align: center;
-  display: flex;
-  padding: 20px;
-}
-
-.productList img {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-}
-
-.productList img:hover {
-  transform: scale(1.1);
 }
 
 .overall {
@@ -253,4 +217,64 @@
 
 .emailInput {
   margin: 10px;
+}
+
+.contact-us {
+  padding: 50px;
+  display: flex;
+}
+
+.left-side {
+  flex: 1;
+  padding: 0 20px; 
+}
+
+.right-side {
+  flex: 1;
+  padding: 0 20px; 
+}
+
+form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

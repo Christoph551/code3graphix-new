@@ -26,9 +26,6 @@ function Drinkware() {
                             <div className="productCard">
                                 <h3>{product.product_name}</h3>
                                 <Img className='cardImage' src={`${product.image}`} alt={product.product_name} />
-
-                                {/* Find dropdown component in bootstrap and allow users to select a size */}
-                                {/* Add additional dropdowns to select font style, color, etc... Would need to integrate into database models */}
                             </div>
                         </div>
                         <div className='productInfo'>
